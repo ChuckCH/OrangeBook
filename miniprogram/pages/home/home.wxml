@@ -1,0 +1,41 @@
+<!--pages/home/home.wxml-->
+<view class="all-page">
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" class="weui-search-bar__input"  disabled='true' placeholder="搜索橘子书" bindtap="wxSearchTab"/>
+    </view>
+  </view>
+</view> 
+
+<scroll-view class="box-sv" scroll-x="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-left="{{scrollTop}}">
+  <view class="scroll1">
+    <image wx:for="{{img}}" wx:key="{{index}}" src='{{item.ImgUrl}}' bindtap='img' mode="aspectFill" data-url='{{item.ImgUrl}}'>
+    </image>
+  </view>
+</scroll-view>
+
+<scroll-view class="box-ch" scroll-x="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-left="{{scrollTop}}">
+  <view class="scroll2">
+    <image wx:for="{{img}}" wx:key="{{index}}" src='{{item.ImgUrl}}' bindtap='img' mode="aspectFill" data-url='{{item.ImgUrl}}'>
+    </image>
+  </view>
+</scroll-view>
+
+
+<view class='list-box'>
+  <view class='goods-list' wx:for="{{goods}}" wx:key="{{id}}">
+    <image class="goods-pic" src="{{item.image}}" mode='aspectFill'></image>
+    <text class="goods-name" bindtap='go_details' data-index="{{index}}">{{item.title}}</text>
+    <text class="goods-price">￥{{item.price}}</text>
+    <text class="goods-position">{{item.position}}</text>
+  </view>
+</view>
+
+</view>
+
+<button bindtap='go'>查看商品列表</button>
+
+
+

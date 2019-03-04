@@ -1,0 +1,51 @@
+@import '../common/common.wxss';
+.goods-box{
+    position: relative;
+    padding: 40rpx 45rpx;
+    text-align: center;
+    color: #454552;
+    border-bottom: 40rpx solid #FFA500;
+}
+.goods-box .goods-thumb{
+    margin: auto;
+    width: 300rpx;
+    height: 300rpx;
+}
+
+.bottom{
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 200rpx;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.bottom .goods-operation{
+    width: 40%;
+    height: 100rpx;
+    line-height: 100rpx;
+    margin-bottom: 60rpx;
+    box-sizing: border-box;
+    border-radius: 50rpx;
+    background: #FFA500;
+    color: #fff;
+    font-size: 36rpx;
+    text-align: center;
+}
+.goods-to-collect image{
+  margin-left: 16px;
+  width: 64rpx;
+  height: 64rpx;
+  margin-bottom: 60rpx;
+}
+
+.goods-operation text{
+    display: inline-block;
+    height: 100rpx;
+}
+.goods-tab-box{
+    text-align: left;
+    border-left: 10rpx solid #fff;
+    margin: 10rpx;
+}

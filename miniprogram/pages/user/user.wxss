@@ -1,0 +1,79 @@
+/* pages/user/user.wxss */
+.avatar-wrapper {
+  background: #ffffff;
+  padding: 25px 0;
+  box-shadow: 0 6rpx 10rpx 2rpx #3f3f3f6b;
+}
+
+.avatar-wrapper .avatar {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.avatar-wrapper .avatar image {
+  width: 100px;
+  height: 100px;
+}
+
+.avatar-wrapper .text {
+  text-align: center;
+  color: #000000;
+}
+
+.weui-cell__hd image {
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.weui-cells::after{
+  content: none;
+  border-bottom: none;
+}
+
+.weui-cells::before{
+  border-top: none;
+}
+
+.warning_bar {
+  width: 99%;
+  background: #FFA500;
+  border: 2rpx  dashed #000000;
+}
+
+
+.list-wrapper {
+  position: fixed;
+  top: 490rpx;
+  left: 10%;
+  width: 80%;
+  height: 450rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content:  space-between;
+  overflow: hidden;
+  border-radius: 30%;
+}
+
+.box_class{
+  width: 48%;
+  height: 48%;
+  background: #FFA500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.box_class image{
+  margin-left: 16px;
+  width: 64rpx;
+  height: 64rpx;
+}
+
+
+
+
+
