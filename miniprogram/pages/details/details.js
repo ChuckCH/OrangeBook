@@ -39,9 +39,17 @@ Page({
   },
 
   onLoad(options){
-    var queryBean = JSON.parse(options.goods);
-    this.setData({
-      goods:queryBean,
+    var that = this
+    var queryBean = JSON.parse(options.goods)
+    const db = wx.cloud.database()
+    db.collection('books').where({
+      'id':queryBean
+    }).get({
+      success: res => {
+        this.setData({
+          goods: res.data[0]
+        })
+      }
     })
   }
 })

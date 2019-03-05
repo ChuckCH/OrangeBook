@@ -9,3 +9,6 @@
     </view>
   </view>
 </view>
+<view wx:else>
+  <view>暂无商品!</view>
+</view>
