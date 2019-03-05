@@ -6,7 +6,8 @@
     "pages/user/user",
     "pages/details/details",
     "pages/common/common",
-    "pages/history/history"
+    "pages/history/history",
+    "pages/mygoodstosell/mygoodstosell"
   ],
   "window": {
     "backgroundTextStyle": "light",
