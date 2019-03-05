@@ -7,7 +7,7 @@ Page({
     menuitems: [
       { text: '账号信息', url: '../userinfo/userinfo', icon: '../../images/usermenu/info.png', tips: '' },
       { text: '历史订单', url: '../history/history', icon: '../../images/usermenu/history.png', tips: '' },
-      { text: '我的出售', url: '../borrowbook/borrowbook?status=Y', icon: '../../images/usermenu/sell.png', tips: '' },
+      { text: '我的出售', url: '../mygoodstosell/mygoodstosell', icon: '../../images/usermenu/sell.png', tips: '' },
       { text: '我的收藏', url: '../favorcate/favorcate', icon: '../../images/usermenu/favor.png', tips: '' },
     ],
     canIUse: wx.canIUse('button.open-type.getUserInfo'),

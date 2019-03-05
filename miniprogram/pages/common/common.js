@@ -1,6 +1,7 @@
 // pages/common/common.js
-Page({
 
+Page({
+ 
   /**
    * 页面的初始数据
    */

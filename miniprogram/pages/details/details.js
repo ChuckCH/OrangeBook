@@ -39,7 +39,18 @@ Page({
   },
 
   onLoad(options){
-    var queryBean = JSON.parse(options.goods);
+    var queryBean = JSON.parse(options.goods.id);
+    console.log(queryBean);
+
+    wx.cloud.init({
+      env: 'orangebook-b6dfcf',
+      traceUser: true
+    });
+    // 初始化数据库
+    const db = wx.cloud.database();
+
+
+
     this.setData({
       goods:queryBean,
     })
