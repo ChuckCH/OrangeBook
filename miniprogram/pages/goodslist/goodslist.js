@@ -21,7 +21,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    common.requestPromise('books').then(
+    common.GetUserEntity('books').then(
       res=>{
         this.setData({
           goods:res.data

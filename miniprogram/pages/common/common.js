@@ -1,4 +1,16 @@
 // pages/common/common.js
+function getOpenid() {
+  // 返回一个Promise实例对象
+  return new Promise((resolve, reject) => {
+    wx.cloud.callFunction({
+      name: 'login',
+      complete: res => {
+        var _openid = res.result.openid;
+        resolve(_openid)
+      }
+    })
+  })
+}
 function GetUserEntity(collection) {
   return new Promise(function (resolve, reject) {
     const db = wx.cloud.database()
@@ -11,8 +23,9 @@ function GetUserEntity(collection) {
       }
     })    
   })
-};
-module.exports.requestPromise = GetUserEntity
+}
+module.exports.GetUserEntity = GetUserEntity
+module.exports.getOpenid= getOpenid
 
 Page({
  

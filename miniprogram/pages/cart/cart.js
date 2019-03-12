@@ -1,5 +1,7 @@
 import regeneratorRuntime from '../../utils/regenerator-runtime/runtime.js'
-const app = getApp();
+var common = require("../common/common.js")
+const db = wx.cloud.database()
+var openid = common.getOpenid()
 Page({
   data: {
     carts:[],
@@ -30,7 +32,7 @@ Page({
   /**
    * 删除购物车当前商品
    */
-  deleteList(e) {
+  async deleteList(e) {
     let that = this
     const index = e.currentTarget.dataset.index;
     let carts = that.data.carts;
@@ -46,12 +48,9 @@ Page({
     } else {
       that.getTotalPrice();
     }
-    const db = wx.cloud.database()
-    const mes = db.collection('cart').doc('XIeP41sqTi00tpHe').remove({
-      success: function (res) {
-        console.log(res.data)
-      }
-    })
+    let itemid = await that.getItemid(openid._openid,bookid)
+    await that.removeItem(itemid.data[0]._id)
+    
   },
 
   /**
@@ -100,8 +99,7 @@ Page({
   */
   async getCartList(){
     let that = this
-    let userid = 123  
-    let first = await that.getBookId(userid)
+    let first = await that.getBookId(openid._openid)
     let bookinfo = []
     for (let i = 0; i < first.data.length; i++) {
       let second = await that.getBookInfo(first.data[i].book_id)
@@ -126,21 +124,20 @@ Page({
   /*
     从购物车信息表获取用户购物车中书本id 
   */
-  getBookId(userid){
+  getBookId(openids){
     let that = this
-    return new Promise(function(resolve,reject){
-      const db = wx.cloud.database()
-      db.collection('cart').where({
-        user_id: userid
-      }).get({
-        success: res => {
-          resolve(res)
-        },
-        fail: () => {
-          reject("系统异常，请重试！")
-        }
-    })
-  })
+      return new Promise(function (resolve, reject) {
+        db.collection('cart').where({
+          _open_id: openids
+        }).get({
+          success: res => {
+            resolve(res)
+          },
+          fail: () => {
+            reject("系统异常，请重试！")
+          }
+        })
+      })
   },
 
   /*
@@ -148,7 +145,6 @@ Page({
    */
   getBookInfo(bookid) {
     return new Promise(function (resolve, reject) {
-      const db = wx.cloud.database()
       db.collection('books').where({
         id: bookid
       }).get({
@@ -159,6 +155,28 @@ Page({
           reject("系统异常，请重试！")
         }
       })
+    })
+  },
+  getItemid(openids,bookid){
+    return new Promise(function (resolve, reject) {
+      db.collection('cart').where({
+        _openid:openids,
+        book_id: bookid
+      }).get({
+        success: res => {
+          resolve(res)
+        },
+        fail: () => {
+          reject("系统异常，请重试！")
+        }
+      })
+    })
+  },
+  removeItem(itemId){
+    db.collection('cart').doc(itemId).remove({
+      success: function (res) {
+        console.log
+      }
     })
   }
 

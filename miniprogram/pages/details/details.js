@@ -1,16 +1,6 @@
+var common = require("../common/common.js")
 const app = getApp();
-function requestPromise() {
-  // 返回一个Promise实例对象
-  return new Promise((resolve, reject) => {
-    wx.cloud.callFunction({
-      name: 'login',
-      complete: res => {
-        var _openid = res.result.openid;
-        resolve(_openid)
-      }
-    })
-  })
-}
+
 Page({
   data: {
     goods: {},
@@ -38,7 +28,7 @@ Page({
   addToCart() {
     let goodsinfo = this.data.goods;
     const db = wx.cloud.database()
-    requestPromise().then(
+    common.getOpenid().then(
       res =>{
         db.collection('cart').where({
           _openid: res._openid,
