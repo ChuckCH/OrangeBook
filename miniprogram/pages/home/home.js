@@ -1,5 +1,10 @@
 // pages/home/home.js
 Page({
+  wxSearchTab: function () {
+    wx.navigateTo({
+      url: '../search/search'
+    });
+  },
 
   /**
    * 页面的初始数据

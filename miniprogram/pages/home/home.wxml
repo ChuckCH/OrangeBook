@@ -1,13 +1,16 @@
 <!--pages/home/home.wxml-->
 <view class="all-page">
-<view class="weui-search-bar">
-  <view class="weui-search-bar__form">
-    <view class="weui-search-bar__box">
-      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-      <input type="text" class="weui-search-bar__input"  disabled='true' placeholder="搜索橘子书" bindtap="wxSearchTab"/>
-    </view>
+  <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <input type="text" class="weui-search-bar__input" placeholder="搜索橘子树" disabled='disabled'/>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="wxSearchTab">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索橘子树</view>
+        </label>
+      </view>
   </view>
-</view> 
 
 <scroll-view class="box-sv" scroll-x="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-left="{{scrollTop}}">
   <view class="scroll1">

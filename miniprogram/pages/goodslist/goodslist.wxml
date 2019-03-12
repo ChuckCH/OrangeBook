@@ -3,9 +3,12 @@
   <view class='list-box'>
     <view class='goods-list' wx:for="{{goods}}" wx:key="{{id}}">
       <image class="goods-pic" src="{{item.image}}" mode='aspectFill'></image>
-      <text class="goods-name" bindtap='go_details' data-index="{{index}}">{{item.title}}</text>
+      <text class="goods-name" bindtap='go_details' data-index="{{index}}">{{item.book_name}}</text>
       <text class="goods-price">￥{{item.price}}</text>
       <text class="goods-position">{{item.position}}</text>
     </view>
   </view>
+</view>
+<view wx:else>
+  <view>暂无商品!</view>
 </view>

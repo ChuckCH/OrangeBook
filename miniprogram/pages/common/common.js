@@ -1,4 +1,21 @@
 // pages/common/common.js
+<<<<<<< HEAD
+=======
+function GetUserEntity(collection) {
+  return new Promise(function (resolve, reject) {
+    const db = wx.cloud.database()
+    db.collection(collection).get({
+      success: res => {
+        resolve(res)
+      },
+      fail: () => {
+        reject("系统异常，请重试！")
+      }
+    })    
+  })
+};
+module.exports.requestPromise = GetUserEntity
+>>>>>>> cloud_0.0.4
 
 Page({
  

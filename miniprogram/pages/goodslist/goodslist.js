@@ -1,65 +1,36 @@
 // pages/goodslist/goodslist.js
+var common = require("../common/common.js")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    goods: [
-      {
-        id: 1,
-        image: '/images/goods/goods2.png',
-        title: '书名',
-        sub_title: '子书名',
-        seller: 'jxx',
-        price: 0.01,
-        full_price: 1.00,
-        detail: '书本详情',
-        used: '八成新',
-        author: '作者',
-        publishing_house: '出版社',
-        publishing_time: '出版时间',
-        position: '2号货柜',
-        selected: false,
-        num:1,
-        recommend: false,
-        collect: false
-      },
-      {
-        id: 2,
-        image: '/images/goods/goods1.png',
-        title: '书名2',
-        sub_title: '子书名2',
-        seller: 'jxx2',
-        price: 0.03,
-        full_price: 2.00,
-        detail: '书本详情',
-        used: '六成新',
-        author: '作者',
-        publishing_house: '出版社',
-        publishing_time: '出版时间',
-        position: '2号货柜',
-        selected: false,
-        num:1,
-        recommend: false,
-        collect: false
-      }
-    ],
+    goods: [],
     hasgoods:true
   },
   go_details(e){
-    var that = this;
     const index = e.currentTarget.dataset.index;
-    var queryBean = JSON.stringify(that.data.goods[index])
+    var queryBean = JSON.stringify(this.data.goods[index].id)
     wx.navigateTo({
       url: '../details/details?goods='+queryBean,
     })
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    common.requestPromise('books').then(
+      res=>{
+        this.setData({
+          goods:res.data
+        })
+      },
+      res =>{
+        console.log('fail')
+      }
+    )
   },
 
   /**
@@ -73,7 +44,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+   
   },
 
   /**
