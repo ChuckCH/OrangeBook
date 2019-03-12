@@ -13,7 +13,7 @@ Page({
   
   onShow() {
     let that = this
-    that.getCartList()
+    that.getCartList() //（）加入userid
   },
 
   /**
@@ -31,19 +31,27 @@ Page({
    * 删除购物车当前商品
    */
   deleteList(e) {
+    let that = this
     const index = e.currentTarget.dataset.index;
-    let carts = this.data.carts;
+    let carts = that.data.carts;
+    let bookid = carts[index].id
     carts.splice(index, 1);
-    this.setData({
+    that.setData({
       carts: carts
     });
     if (!carts.length) {
-      this.setData({
+      that.setData({
         hasList: false
       });
     } else {
-      this.getTotalPrice();
+      that.getTotalPrice();
     }
+    const db = wx.cloud.database()
+    const mes = db.collection('cart').doc('XIeP41sqTi00tpHe').remove({
+      success: function (res) {
+        console.log(res.data)
+      }
+    })
   },
 
   /**
@@ -92,7 +100,7 @@ Page({
   */
   async getCartList(){
     let that = this
-    let userid = 10165101159
+    let userid = 123  
     let first = await that.getBookId(userid)
     let bookinfo = []
     for (let i = 0; i < first.data.length; i++) {

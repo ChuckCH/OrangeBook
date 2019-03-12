@@ -14,7 +14,6 @@ function requestPromise() {
     wx.cloud.callFunction({
       name: 'login',
       complete: res => {
-        console.log('云函数获取到的openid: ', res.result.openid)
         var _openid = res.result.openid;
         resolve(_openid)
       }
