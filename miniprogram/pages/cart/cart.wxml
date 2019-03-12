@@ -4,14 +4,9 @@
             <view class="cart-list" wx:for="{{carts}}" wx:key="{{index}}">
                 <icon wx:if="{{item.selected}}" type="success" color="red" data-index="{{index}}"  class="cart-pro-select" bindtap="selectList"/>
                 <icon wx:else type="circle" class="cart-pro-select" data-index="{{index}}" bindtap="selectList"/>
-                <image class="cart-pic" src="{{item.image}}" mode='aspectFill'></image>
-                <text class="cart-pro-name">{{item.title}}</text>
+                <image class="cart-pic" src="{{item.cover}}" mode='aspectFill'></image>
+                <text class="cart-pro-name">{{item.book_name}}</text>
                 <text class="cart-pro-price">￥{{item.price}}</text>
-                <view class="cart-count-box">
-                    <text class="cart-count-down" bindtap="minusCount" data-index="{{index}}">-</text>
-                    <text class="cart-count-num">{{item.num}}</text>
-                    <text class="cart-count-add" bindtap="addCount" data-index="{{index}}">+</text>
-                </view>
                 <text class="cart-del" bindtap="deleteList" data-index="{{index}}">×</text>
             </view>
         </view>

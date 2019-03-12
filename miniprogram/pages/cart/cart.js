@@ -1,26 +1,27 @@
+import regeneratorRuntime from '../../utils/regenerator-runtime/runtime.js'
 const app = getApp();
 Page({
   data: {
     carts:[],
     hasList: false,          // 列表是否有数据
     totalPrice: 0,           // 总价，初始为0
-    selectAllStatus: false,    // 全选状态，默认全选
+    selectAllStatus: false,    // 全选状态，默认全不选
     obj: {
       name: "hello"
     }
   },
+  
   onShow() {
-    this.setData({
-      hasList: true
-    });
-    this.getTotalPrice();
+    let that = this
+    that.getCartList()
   },
+
   /**
    * 当前商品选中事件
    */
   selectList(e) {
+    let carts = this.data.carts
     const index = e.currentTarget.dataset.index;
-    let carts = app.globalData.carts;
     const selected = carts[index].selected;
     carts[index].selected = !selected;
     this.getTotalPrice();
@@ -31,7 +32,7 @@ Page({
    */
   deleteList(e) {
     const index = e.currentTarget.dataset.index;
-    let carts = app.globalData.carts;
+    let carts = this.data.carts;
     carts.splice(index, 1);
     this.setData({
       carts: carts
@@ -51,7 +52,7 @@ Page({
   selectAll(e) {
     let selectAllStatus = this.data.selectAllStatus;
     selectAllStatus = !selectAllStatus;
-    let carts = app.globalData.carts;
+    let carts = this.data.carts;
 
     for (let i = 0; i < carts.length; i++) {
       carts[i].selected = selectAllStatus;
@@ -62,65 +63,95 @@ Page({
     });
     this.getTotalPrice();
   },
-
-  /**
-   * 绑定加数量事件
-   */
-  addCount(e) {
-    const index = e.currentTarget.dataset.index;
-    let carts = app.globalData.carts;
-    let num = carts[index].num;
-    num = num + 1;
-    carts[index].num = num;
-    this.setData({
-      carts: carts
-    });
-    this.getTotalPrice();
-  },
-
-  /**
-   * 绑定减数量事件
-   */
-  minusCount(e) {
-    const index = e.currentTarget.dataset.index;
-    const obj = e.currentTarget.dataset.obj;
-    let carts = app.globalData.carts;
-    let num = carts[index].num;
-    if (num <= 1) {
-      return false;
-    }
-    num = num - 1;
-    carts[index].num = num;
-    this.setData({
-      carts: carts
-    });
-    this.getTotalPrice();
-  },
-
   /**
    * 计算总价
    */
   getTotalPrice() {
-    let carts = app.globalData.carts;                  // 获取购物车列表
+    let carts = this.data.carts
     let total = 0;
     let selectedcount = 0;
-    for (let i = 0; i < app.globalData.carts.length; i++) {         // 循环列表得到每个数据
+    for (let i = 0; i < carts.length; i++) {         // 循环列表得到每个数据
       if (carts[i].selected) {                     // 判断选中才会计算价格
-        total += carts[i].num * carts[i].price;   // 所有价格加起来
+        total += carts[i].price;   // 所有价格加起来
         selectedcount += 1;
       }
     }
-    if(selectedcount == app.globalData.carts.length){
-      this.data.selectAllStatus = true;
+    let selectAllStatus = false
+    if(selectedcount == carts.length){
+      selectAllStatus = true;
     }
-    else{
-      this.data.selectAllStatus = false;
-    }
-    let selectAllStatus = this.data.selectAllStatus;
     this.setData({                                // 最后赋值到data中渲染到页面
       selectAllStatus:selectAllStatus,
       carts: carts,
       totalPrice: total.toFixed(2)
     });
+  },
+
+  /* 
+    获取用户购物车列表
+  */
+  async getCartList(){
+    let that = this
+    let userid = 10165101159
+    let first = await that.getBookId(userid)
+    let bookinfo = []
+    for (let i = 0; i < first.data.length; i++) {
+      let second = await that.getBookInfo(first.data[i].book_id)
+      var data = second.data[0]
+      data.selected=false
+      bookinfo.push(data)
+    }
+    that.setData({
+      carts:bookinfo
+    })
+    if(that.data.carts.length > 0){
+      that.setData({
+        hasList:true
+      })
+    }else{
+      that.setData({
+        hasList:false
+      })
+    }
+  },
+
+  /*
+    从购物车信息表获取用户购物车中书本id 
+  */
+  getBookId(userid){
+    let that = this
+    return new Promise(function(resolve,reject){
+      const db = wx.cloud.database()
+      db.collection('cart').where({
+        user_id: userid
+      }).get({
+        success: res => {
+          resolve(res)
+        },
+        fail: () => {
+          reject("系统异常，请重试！")
+        }
+    })
+  })
+  },
+
+  /*
+    从书本信息表中获取书本信息
+   */
+  getBookInfo(bookid) {
+    return new Promise(function (resolve, reject) {
+      const db = wx.cloud.database()
+      db.collection('books').where({
+        id: bookid
+      }).get({
+        success: res => {
+          resolve(res)
+        },
+        fail: () => {
+          reject("系统异常，请重试！")
+        }
+      })
+    })
   }
+
 })
