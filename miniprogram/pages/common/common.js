@@ -1,6 +1,4 @@
 // pages/common/common.js
-<<<<<<< HEAD
-=======
 function GetUserEntity(collection) {
   return new Promise(function (resolve, reject) {
     const db = wx.cloud.database()
@@ -15,8 +13,6 @@ function GetUserEntity(collection) {
   })
 };
 module.exports.requestPromise = GetUserEntity
->>>>>>> cloud_0.0.4
-
 Page({
  
   /**
