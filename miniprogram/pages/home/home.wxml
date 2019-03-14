@@ -13,10 +13,11 @@
   </view>
 
 <scroll-view class="box-sv" scroll-x="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-left="{{scrollTop}}">
-  <view class="scroll1">
-    <image wx:for="{{img}}" wx:key="{{index}}" src='{{item.ImgUrl}}' bindtap='img' mode="aspectFill" data-url='{{item.ImgUrl}}'>
-    </image>
-  </view>
+    <view class="scroll1">
+    <view class="image" wx:for="{{img}}" wx:key="{{index}}" src='{{item.ImgUrl}}' bindtap='img' style="background-image: url({{item.ImgUrl}});">
+    <text class="text-in-img">?</text>
+    </view>
+    </view>
 </scroll-view>
 
 <scroll-view class="box-ch" scroll-x="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-left="{{scrollTop}}">

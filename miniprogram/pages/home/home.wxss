@@ -1,20 +1,25 @@
 /* pages/home/home.wxss */
 @import "../../weui.wxss";
 
-.scroll1 {
+.scroll1{
   position: relative;
+  display: inline-flex;
   flex-direction: row; 
-  width: 700rpx;
+  align-items: flex-start;
   padding: 20rpx 0rpx;
   height: 400rpx;
   white-space: nowrap;
-  margin:30rpx 20rpx;
 }
-.box-sv image{
+.image{
   width: 300rpx;
   height: 360rpx;
   margin-right: 20rpx;
   border-radius: 5px;
+  border: 5rpx solid #eb1919;
+}
+.text-in-img{
+  overflow: hidden;
+  border: 5rpx solid #eb1919;
 }
 
 .scroll2 {
