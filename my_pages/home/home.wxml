@@ -1,0 +1,46 @@
+<!--pages/home/home.wxml-->
+<view class="all-page">
+  <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <input type="text" class="weui-search-bar__input" placeholder="搜索橘子树" disabled='disabled'/>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="wxSearchTab">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索橘子树</view>
+        </label>
+      </view>
+  </view>
+
+<scroll-view class="box-sv" scroll-x="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-left="{{scrollTop}}">
+    <view class="scroll1">
+    <view class="image" wx:for="{{message}}" wx:key="{{index}}" bindtap='img' style="background-image: url({{message[index]}});background-repeat:round;">
+    <text class="text-in-img">{{img[index].text}}</text>
+    </view>
+    </view>
+</scroll-view>
+
+<scroll-view class="box-ch" scroll-x="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-left="{{scrollTop}}">
+  <view class="scroll2">
+    <view class="image2" wx:for="{{message2}}" wx:key="{{index}}" bindtap='img' style="background-image: url({{message2[index]}});background-repeat:round;">
+    <text class="text-in-img2">{{img2[index].text}}</text>
+    </view>
+    </view>
+</scroll-view>
+
+
+<view class='list-box'>
+  <view class='goods-list' wx:for="{{goods}}" wx:key="{{id}}">
+    <image class="goods-pic" src="{{item.image}}" mode='aspectFill'></image>
+    <text class="goods-name" bindtap='go_details' data-index="{{index}}">{{item.title}}</text>
+    <text class="goods-price">￥{{item.price}}</text>
+    <text class="goods-position">{{item.position}}</text>
+  </view>
+</view>
+
+</view>
+
+<button bindtap='go'>查看商品列表</button>
+
+
+

@@ -1,0 +1,7 @@
+{
+      "navigationBarTitleText": "橘子书",
+      "navigationBarTextStyle": "black",
+      "enablePullDownRefresh": false,
+      "backgroundTextStyle": "dark",
+      "onReachBottomDistance": 15
+}

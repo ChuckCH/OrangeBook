@@ -1,0 +1,88 @@
+/* pages/home/home.wxss */
+@import "../../weui.wxss";
+
+.scroll1{
+  position: relative;
+  display: inline-flex;
+  flex-direction: row; 
+  align-items: flex-start;
+  padding: 20rpx 0rpx;
+  height: 380rpx;
+  white-space: nowrap;
+}
+.image{
+  width: 300rpx;
+  height: 350rpx;
+  margin-right: 20rpx;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;  
+}
+.text-in-img{
+  color: #e9e9e9;
+}
+
+.scroll2 {
+ position: relative;
+  display: inline-flex;
+  flex-direction: row; 
+  align-items: flex-start;
+  padding: 20rpx 0rpx;
+  height: 200rpx;
+  white-space: nowrap;
+}
+.image2{
+  width: 200rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+.text-in-img2{
+  color: #e9e9e9;
+  font-weight: bold; 
+}
+
+.list-box{
+  padding-bottom: 100rpx;
+}
+.goods-list{
+  position: relative;
+  padding: 20rpx 20rpx 20rpx 285rpx;
+  height: 185rpx;
+  border-bottom: 1rpx solid #e9e9e9;
+}
+.goods-list .goods-pic{
+  position: absolute;
+  display: inline-block;
+  left: 30rpx;
+  top: 30rpx;
+  width: 180rpx;
+  height: 180rpx;
+}
+.goods-list .goods-name{
+    display: inline-block;
+    width: 700rpx;
+    height: 105rpx;
+    line-height: 50rpx;
+    overflow: hidden;
+}
+.goods-list .goods-price{
+    position: absolute;
+    left: 280rpx;
+    top: 110rpx;
+    font-size: 18px;
+    font-weight: 500;
+    color: red;
+}
+.goods-list .goods-position{
+    position: absolute;
+    left: 290rpx;
+    top: 160rpx;
+    font-size: 12px;
+    font-weight: 100;
+    color: #c9c8c8;
+}
+

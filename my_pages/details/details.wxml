@@ -1,0 +1,27 @@
+<view class="main">
+    <view class="goods-box">
+      <image src="{{goods.image}}" class="goods-thumb"></image>
+      <image wx:if="{{show}}" src="/images/cart1.png" class="to-carts-icon"></image>
+    </view>
+    
+    <view class="goods-tab-box">
+        <view class="goods-title">{{goods.title}}</view>
+        <view class="goods-sub_title">{{goods.sub_title}}</view>
+        <view class="goods-price">￥{{goods.price}}</view>
+        <view class="goods-full_price">原 价：￥{{goods.full_price}}</view>
+        <view class="goods-author">作 者：{{goods.author}}</view>
+        <view class="goods-publishing_house">出版社：{{goods.publishing_house}}</view>
+        <view class="goods- publishing_time">出 版：{{goods. publishing_time}}</view>
+    </view>
+    <view class="bottom">
+      <view class="goods-to-collect">
+          <image wx:if="{{recommend}}" src="/images/icon/flower_red.png" class="flower_recommend" bindtap="recommend"></image>
+           <image wx:else src="/images/icon/flower_gray.png" class="flower_not_recommend" bindtap="recommend"></image>
+          <image wx:if="{{collect}}" src="/images/icon/star_gray.png" class="star_collect" bindtap="collect"></image>
+           <image wx:else src="/images/icon/star_gray.png" class="star_not_collect" bindtap="collect"></image>
+      </view>
+      <view class="goods-operation">
+          <text class="goods-to-cart" bindtap="addToCart">加入购物车</text>
+      </view>
+    </view>
+</view>
