@@ -7,9 +7,22 @@ var app = getApp();
 
 Page({
   data: {
+    orderList: []
+  }, onLoad: function (options) {
+    // 页面初始化 options为页面跳转所带来的参数
 
+    this.getOrderList();
   },
-  onLoad: function (options) {
+  getOrderList() {
+    let that = this;
+    util.request(api.OrderList).then(function (res) {
+      if (res.errno === 0) {
+        console.log(res.data);
+        that.setData({
+          orderList: res.data.data
+        });
+      }
+    });
   },
   onReady: function () {
 
