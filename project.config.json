@@ -1,5 +1,5 @@
 {
-	"description": "项目配置文件。",
+	"description": "项目配置文件",
 	"packOptions": {
 		"ignore": []
 	},
@@ -8,12 +8,16 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.98",
-	"appid": "wxc1777a7e65ea6d57",
-	"projectname": "%E9%9B%B6%E9%A3%9F%E5%95%86%E5%9F%8E",
+	"libVersion": "2.6.2",
+	"appid": "wx7fa978ba97f199e4",
+	"projectname": "OrangeBook",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -21,10 +25,6 @@
 			"list": []
 		},
 		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
 			"current": -1,
 			"list": []
 		},
