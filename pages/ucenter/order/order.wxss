@@ -109,5 +109,5 @@ page{
     border-radius: 5rpx;
     font-size: 28rpx;
     color: #fff;
-    background: #b4282d;
+    background: #FFA500;
 }

@@ -106,6 +106,8 @@ Page({
       content: '退出登录？',
       success: function(res) {
         if (res.confirm) {
+          app.globalData.userInfo.nickname = '点击登录';
+          app.globalData.userInfo.avatar = 'http://yanxuan.nosdn.127.net/8945ae63d940cc42406c3f67019c5cb6.png';
           wx.removeStorageSync('token');
           wx.removeStorageSync('userInfo');
           wx.switchTab({

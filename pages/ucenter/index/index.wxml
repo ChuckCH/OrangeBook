@@ -2,10 +2,9 @@
   <view class="profile-info">
     <image bindtap="onUserInfoClick" class="avatar" src="{{userInfo.avatar}}"></image>
     <view class="info">
-      <text class='name' bindtap='onUserInfoClick'>{{ userInfo.nickname || '点击登录' }}</text>
+      <text class='name' bindtap='onUserInfoClick'>{{userInfo.nickname=='点击登录'?'点击登录':'尊敬的'+userInfo.nickname+'，您好'}}</text>
       <!-- <text class='level' bindtap='onUserInfoClick'></text> -->
     </view>
-    <image bindtap="onUserInfoClick" class='btn' src='/static/images/address_right.png'></image>
   </view>
 
   <view class="user-menu">
@@ -40,7 +39,7 @@
       </navigator>
     </view>
     <view class="item no-border">
-      <navigator url="url" class="a">
+      <navigator url="/pages/ucenter/userinfo/userinfo" class="a">
         <image  class="icon" src="/static/images/user_6.png"></image>
         <text class="txt">账号信息</text>
       </navigator>
