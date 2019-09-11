@@ -1,1 +1,37 @@
 /* pages/ucenter/userinfo/userinfo.wxss */
+
+.dialog-login{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.dialog-login .dialog-body{
+  width: 540rpx;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 5px;
+  padding: 40rpx;
+}
+
+.dialog-login .dialog-body .title{
+  width: 100%;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.dialog-login .dialog-body .content{
+  width: 100%;
+}
+
+.dialog-login .dialog-body button{
+  margin-top: 30rpx;
+}
