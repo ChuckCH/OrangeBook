@@ -1,3 +1,6 @@
 {
-  
+    "navigationBarBackgroundColor": "#FFA500",
+    "navigationBarTitleText": "取书码",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f4f4f4"
 }

@@ -24,6 +24,21 @@ Page({
       }
     });
   },
+  payOrder() {
+    wx.redirectTo({
+      url: '/pages/pay/pay',
+    })
+  },
+  showbookcode:function(e) {
+    let show_code = e.currentTarget.dataset['delivery'];
+    if (!show_code){
+      wx.showToast({
+        title: '请先付款',
+        icon: 'none',
+        duration: 2000
+      })
+    }
+  },
   onReady: function () {
 
   },
