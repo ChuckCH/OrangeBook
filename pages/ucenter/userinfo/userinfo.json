@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "navigationBarBackgroundColor": "#FFA500",
+  "navigationBarTitleText": "账号信息",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#f4f4f4"
 }

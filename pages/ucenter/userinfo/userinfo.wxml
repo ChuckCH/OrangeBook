@@ -8,3 +8,15 @@
     </view>
   </view>
 </view>
+
+<view class='item'>
+  <text class="item-text">用户名</text>
+  <text class='item-array'>{{userInfo.nickname}}></text>
+</view>
+<view class="div-line"></view>
+<view class='item 2'>
+  <text class="item-text">头像</text>
+  <image class="item-image" src="{{userInfo.avatar}}"></image>
+  <text class='item-array'>></text>
+</view>
+<view class="div-line"></view>
