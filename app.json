@@ -36,10 +36,10 @@
     "pages/topicDetail/topicDetail"
   ],
   "window": {
-    "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "仿网易严选",
-    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#FFA500",
+    "navigationBarTitleText": "橘子书",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f4f4f4",
     "enablePullDownRefresh": true
   },
   "tabBar": {

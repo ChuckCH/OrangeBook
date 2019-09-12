@@ -55,9 +55,9 @@
 /* 横着的分割View样式 */
 /*分割线样式*/
 .div-line{
-  background: linear-gradient(to right,#E0E3DA,rgb(180, 182, 175));
+  background: linear-gradient(rgb(88, 88, 86),#E0E3DA);
   width: 100%;
-  height: 4rpx;
+  height:10rpx;
 }
 .item-image {
   position: fixed;
