@@ -50,7 +50,13 @@ Page({
   onDialogBody () {
     // 阻止冒泡
   },
-
+  nopageerror () {
+    wx.showToast({
+      title: '目前尚未开放',
+      icon: 'none',
+      duration: 2000
+    })
+  },
   onWechatLogin(e) {
     if (e.detail.errMsg !== 'getUserInfo:ok') {
       if (e.detail.errMsg === 'getUserInfo:fail auth deny') {

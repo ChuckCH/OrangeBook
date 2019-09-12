@@ -20,11 +20,11 @@
         <text class="txt">取书码</text>
       </navigator>
     </view>
-    <view class="item no-border">
-      <navigator url="url" class="a">
+    <view class="item no-border" bindtap='nopageerror'>
+      <view class="a">
         <image  class="icon" src="/static/images/user_3.png"></image>
         <text class="txt">我的出售</text>
-      </navigator>
+      </view>
     </view>
     <view class="item">
       <navigator url="/pages/ucenter/collect/collect" class="a">
@@ -44,11 +44,11 @@
         <text class="txt">账号信息</text>
       </navigator>
     </view>
-    <view class="item item-bottom">
-      <navigator url="url" class="a">
+    <view class="item item-bottom" bindtap='nopageerror'>
+      <view class="a">
         <image  class="icon" src="/static/images/user_7.png"></image>
         <text class="txt">帮助中心</text>
-      </navigator>
+      </view>
     </view>
     <view class="item item-bottom">
       <navigator url="/pages/ucenter/feedback/feedback" class="a">
