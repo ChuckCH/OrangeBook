@@ -92,22 +92,6 @@
       </view>
     </view>
   </view>
-
-  <view class="related-goods" wx:if="{{relatedGoods.length > 0}}">
-    <view class="h">
-      <view class="line"></view>
-      <text class="title">大家都在看</text>
-    </view>
-    <view class="b">
-      <view class="item" wx:for="{{relatedGoods}}" wx:key="{{item.id}}">
-        <navigator url="/pages/goods/goods?id={{item.id}}">
-          <image class="img" src="{{item.list_pic_url}}" background-size="cover"></image>
-          <text class="name">{{item.name}}</text>
-          <text class="price">￥{{item.retail_price}}</text>
-        </navigator>
-      </view>
-    </view>
-  </view>
 </view>
 <view class="attr-pop-box" hidden="{{!openAttr}}">
   <view class="attr-pop">
