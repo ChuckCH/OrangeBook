@@ -19,7 +19,15 @@ Page({
     size: 20,
     currentSortType: 'id',
     currentSortOrder: 'desc',
-    categoryId: 0
+    categoryId: 0,
+    defaultKeyword_my: "概率论与数理统计",
+    hotKeyword_my:[
+      { keyword: "计算机组成原理", is_hot:"0"},
+      { keyword: "计算机网络", is_hot: "0" },
+      { keyword: "软件项目管理", is_hot: "0"},
+      { keyword: "马克思主义理论", is_hot: "0" },
+      { keyword: "高等数学", is_hot: "0" }
+      ]
   },
   //事件处理函数
   closeSearch: function () {

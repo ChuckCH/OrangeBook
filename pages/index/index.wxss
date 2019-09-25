@@ -43,46 +43,13 @@
   height: 417rpx;
 }
 
-.m-menu {
-  display: flex;
-  height: 181rpx;
-  width: 750rpx;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #fff;
-}
-
-.m-menu .item {
-  flex: 1;
-  display: block;
-  padding: 20rpx 0;
-}
-
-.m-menu image {
-  display: block;
-  width: 58rpx;
-  height: 58rpx;
-  margin: 0 auto;
-  margin-bottom: 12rpx;
-}
-
-.m-menu text {
-  display: block;
-  font-size: 24rpx;
-  text-align: center;
-  margin: 0 auto;
-  line-height: 1;
-  color: #333;
-}
-
 .a-section {
   width: 750rpx;
   height: auto;
   overflow: hidden;
   background: #fff;
   color: #333;
-  margin-top: 20rpx;
+  margin-top: 5rpx;
 }
 
 .a-section .h {
@@ -90,17 +57,33 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  height: 130rpx;
+  height: 80rpx;
+  background: linear-gradient(to right,#FFB95E 15%,#FCA362 5%,#FA8F66 25%,#F5736B 20%,#F35C70 30%);
+}
+.h2{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx;
+  background: linear-gradient(to right,#FFB95E 25%,#FCA362 15%,#FA8F66 35%,#F5736B 30%,#F35C70 40%);
 }
 
 .a-section .h .txt {
   padding-right: 30rpx;
-  background: url("http://ac-3yr0g9cz.clouddn.com/2cdba05369e10f934e54.png") right 4rpx no-repeat;
-  background-size: 16.656rpx 27rpx;
   display: inline-block;
   height: 36rpx;
   font-size: 33rpx;
-  line-height: 36rpx;
+  line-height: 45rpx;
+  color: #fff;
+}
+.h2 .txt {
+  padding-right: 30rpx;
+  display: inline-block;
+  height: 36rpx;
+  font-size: 33rpx;
+  line-height: 45rpx;
+  color: #fff;
 }
 
 .a-brand .b {
@@ -135,7 +118,12 @@
   color: #333;
 }
 
-.a-brand .mt .price, .a-brand .mt .unit {
+.a-brand .mt .price, .a-brand .price{
+  padding-left: 60%;
+  font-size: 25rpx;
+  color: #999;
+}
+.a-brand .mt .price, .a-brand .unit{
   font-size: 25rpx;
   color: #999;
 }
@@ -157,49 +145,6 @@
 .a-brand .item-1 .img {
   width: 375rpx;
   height: 253rpx;
-}
-
-.a-new .b {
-  width: 750rpx;
-  height: auto;
-  overflow: hidden;
-  padding: 0 31rpx 45rpx 31rpx;
-}
-
-.a-new .b .item {
-  float: left;
-  width: 302rpx;
-  margin-top: 10rpx;
-  margin-left: 21rpx;
-  margin-right: 21rpx;
-}
-
-.a-new .b .item-b {
-  margin-left: 42rpx;
-}
-
-.a-new .b .img {
-  width: 302rpx;
-  height: 302rpx;
-}
-
-.a-new .b .name {
-  text-align: center;
-  display: block;
-  width: 302rpx;
-  height: 35rpx;
-  margin-bottom: 14rpx;
-  overflow: hidden;
-  font-size: 30rpx;
-  color: #333;
-}
-
-.a-new .b .price {
-  display: block;
-  text-align: center;
-  line-height: 30rpx;
-  font-size: 30rpx;
-  color: #b4282d;
 }
 
 .a-popular {
@@ -266,20 +211,20 @@
 }
 
 .a-topic .b {
-  height: 533rpx;
+  height: 500rpx;
   width: 750rpx;
-  padding: 0 0 48rpx 0;
+  padding-top: 5rpx;
 }
 
 .a-topic .b .list {
-  height: 533rpx;
+  height: 500rpx;
   width: 750rpx;
   white-space: nowrap;
 }
 
 .a-topic .b .item {
   display: inline-block;
-  height: 533rpx;
+  height: 500rpx;
   width: 680.5rpx;
   margin-left: 30rpx;
   overflow: hidden;
@@ -292,7 +237,8 @@
 .a-topic .b .img {
   height: 387.5rpx;
   width: 680.5rpx;
-  margin-bottom: 30rpx;
+  margin-bottom: 10rpx;
+  border-radius: 30rpx;
 }
 
 .a-topic .b .np {
@@ -317,67 +263,8 @@
   text-overflow:ellipsis;
 }
 
-.good-grid {
-  width: 750rpx;
-  height: auto;
-  overflow: hidden;
-  background: #fff;
-  margin-top: 20rpx;
-}
-
-.good-grid .h {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;
-  height: 130rpx;
-  font-size: 33rpx;
-  color: #333;
-}
-
-.good-grid .b {
-  width: 750rpx;
-  height: auto;
-  overflow: hidden;
-  padding: 0 20rpx;
-}
-
-.good-grid .b .item {
-  display: block;
-  float: left;
-  width: 345rpx;
-  margin-bottom: 30rpx;
-  height: auto;
-  overflow: hidden;
-  text-align: center;
-}
-
-.good-grid .b .item:nth-child(2n + 1) {
-  margin-right: 20rpx;
-}
-
-.good-grid .item .img {
-  width: 345rpx;
-  height: 345rpx;
-  background: #f8f8f8;
-  margin-bottom: 10rpx;
-}
-
-.good-grid .item .name {
+.div-line{
+  background: linear-gradient(rgb(88, 88, 86),#E0E3DA);
   width: 100%;
-  overflow: hidden;
-  height: 40rpx;
-  line-height: 40rpx;
-  text-align: center;
-  font-size: 30rpx;
-  color: #333;
-}
-
-.good-grid .item .price {
-  width: 100%;
-  height: 46rpx;
-  line-height: 46rpx;
-  text-align: center;
-  font-size: 30rpx;
-  color: #b4282d;
+  height:10rpx;
 }
