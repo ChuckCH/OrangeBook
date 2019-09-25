@@ -7,6 +7,7 @@
     </view>
     <view class="right" bindtap="closeSearch">取消</view>
   </view>
+  <view class="div-line"></view>
   <view class="no-search" wx:if="{{ !searchStatus}}">
       <view class="serach-keywords search-history" wx:if="{{!keyword  && historyKeyword.length}}">
     <view class="h">
@@ -31,22 +32,6 @@
   </view>
 
   <view class="search-result" wx:if="{{ searchStatus && goodsList.length}}">
-    <view class="sort">
-    <view class="sort-box">
-      <view class="item {{currentSortType == 'default' ? 'active' : ''}}" bindtap="openSortFilter" id="defaultSort">
-        <text class="txt">综合</text>
-      </view>
-      <view class="item by-price {{currentSortType == 'price' ? 'active' : ''}} {{currentSortOrder == 'asc'  ? 'asc' : 'desc'}}" bindtap="openSortFilter" id="priceSort">
-        <text class="txt">价格</text>
-      </view>
-      <view class="item {{currentSortType == 'category' ? 'active' : ''}}" bindtap="openSortFilter" id="categoryFilter">
-        <text class="txt">分类</text>
-      </view>
-    </view>
-    <view class="sort-box-category" wx-if="{{categoryFilter}}">
-      <view class="item {{item.checked ? 'active' : ''}}" wx:for="{{filterCategory}}" wx:key="cate-{{item.id}}" data-category-index="{{index}}" bindtap="selectCategory">{{item.name}}</view>
-    </view>
-  </view>
   <view class="cate-item">
     <view class="b">
       <navigator class="item {{(iindex + 1) % 2 == 0 ? 'item-b' : ''}}" url="/pages/goods/goods?id={{iitem.id}}" wx:for="{{goodsList}}" wx:for-item="iitem" wx:for-index="iindex">

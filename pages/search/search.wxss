@@ -15,7 +15,6 @@ page{
     height: 91rpx;
     display: flex;
     background: #fff;
-    border-bottom: 1px solid rgba(0,0,0,.15);
     padding: 0 31.25rpx;
     font-size: 29rpx;
     color: #333;
@@ -67,6 +66,14 @@ page{
     height: 43rpx;
     line-height: 43rpx;
     float: right;
+}
+
+.div-line{
+  position: fixed;
+  top: 91rpx;
+  background: linear-gradient(rgb(88, 88, 86),#E0E3DA);
+  width: 100%;
+  height: 10rpx;
 }
 
 .no-search{
@@ -148,88 +155,8 @@ page{
     border-bottom: 1px solid #f4f4f4;
 }
 
-
-.sort{
-    position: fixed;
-    top: 91rpx;
-    background: #fff;
-    width: 100%;
-    height: 78rpx;
-}
-
-.sort-box{
-    background: #fff;
-    width: 100%;
-    height: 78rpx;
-    overflow: hidden;
-    padding: 0 30rpx;
-    display: flex;
-    border-bottom: 1px solid #d9d9d9;
-}
-
-.sort-box .item{
-    height: 78rpx;
-    line-height: 78rpx;
-    text-align: center;
-    flex:1;
-    color: #333;
-    font-size: 30rpx;
-}
-
-.sort-box .item .txt{
-    display: block;
-    width: 100%;
-    height: 100%;
-    color: #333;
-}
-
-.sort-box .item.active .txt{
-    color: #b4282d;
-}
-
-.sort-box .item.by-price{
-    background: url(//yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/no-3127092a69.png) 155rpx center no-repeat;
-    background-size: 15rpx 21rpx;
-}
-
-.sort-box .item.by-price.active.asc{
-    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/up-636b92c0a5.png) 155rpx center no-repeat;
-    background-size: 15rpx 21rpx;
-}
-
-.sort-box .item.by-price.active.desc{
-    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/down-95e035f3e5.png) 155rpx center no-repeat;
-    background-size: 15rpx 21rpx;
-}
-
-.sort-box-category{
-    background: #fff;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    padding: 40rpx 40rpx 0 0;
-    border-bottom: 1px solid #d9d9d9;
-}
-
-.sort-box-category .item{
-    height: 54rpx;
-    line-height: 54rpx;
-    text-align: center;
-    float: left;
-    padding: 0 16rpx;
-    margin: 0 0 40rpx 40rpx;
-    border: 1px solid #666;
-    color: #333;
-    font-size: 24rpx;
-}
-
-.sort-box-category .item.active{
-    color: #b4282d;
-    border: 1px solid #b4282d;
-}
-
 .cate-item{
-    margin-top: 175rpx;
+    margin-top: 115rpx;
     height: auto;
     overflow: hidden;
 }
