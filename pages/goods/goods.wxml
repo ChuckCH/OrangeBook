@@ -5,20 +5,17 @@
     </swiper-item>
   </swiper>
   <view class="service-policy">
-    <view class="item">30天无忧退货</view>
+    <view class="item">橘书APP质量保证</view>
     <view class="item">48小时快速退款</view>
-    <view class="item">满88元免邮费</view>
+    <view class="item">人工智能估旧</view>
   </view>
   <view class="goods-info">
     <view class="c">
       <text class="name">{{goods.name}}</text>
       <text class="desc">{{goods.goods_brief}}</text>
       <text class="price">￥{{goods.retail_price}}</text>
-      <view class="brand" wx:if="{{brand.name}}">
-        <navigator url="../brandDetail/brandDetail?id={{brand.brandId}}">
-          <text>{{brand.name}}</text>
-        </navigator>
-      </view>
+      <text class="AIold">橘书APP人工智能计算此书为{{goods.extra_price}}成新</text>
+      <text class="SELLERold">卖家估计此书为{{goods.counter_price}}成新</text>
     </view>
   </view>
   <view class="section-nav section-attr" bindtap="switchAttrPop">

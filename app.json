@@ -33,11 +33,12 @@
     "pages/shopping/address/address",
     "pages/shopping/addressAdd/addressAdd",
     "pages/goods/goods",
-    "pages/topicDetail/topicDetail"
+    "pages/topicDetail/topicDetail",
+    "pages/code/code"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FFA500",
-    "navigationBarTitleText": "橘子书",
+    "navigationBarTitleText": "橘书",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#f4f4f4",
     "enablePullDownRefresh": true
@@ -59,12 +60,6 @@
         "iconPath": "static/images/ic_menu_topic_nor.png",
         "selectedIconPath": "static/images/ic_menu_topic_pressed.png",
         "text": "专题"
-      },
-      {
-        "pagePath": "pages/catalog/catalog",
-        "iconPath": "static/images/ic_menu_sort_nor.png",
-        "selectedIconPath": "static/images/ic_menu_sort_pressed.png",
-        "text": "分类"
       },
       {
         "pagePath": "pages/cart/cart",

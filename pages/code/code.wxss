@@ -1,0 +1,44 @@
+/* pages/code/code.wxss */
+.a {
+    height: 100%;
+    width: 100%;
+}
+
+.a .id_1{
+    margin-top: 30rpx;
+    height: 80rpx;
+    width: 100%;
+    line-height: 80rpx;
+    text-align: right;
+    background: linear-gradient(to right,#FFB95E 15%,#FCA362 5%,#FA8F66 25%,#F5736B 20%,#F35C70 30%);
+}
+
+.text1{
+    padding-right: 20rpx;
+    color: #fff;
+    font-size: 40rpx;
+    }
+
+.id_2{
+    margin-top: 30rpx;
+    height: 30rpx;
+    width: 100%;
+    line-height: 30rpx;
+    text-align: center;
+}
+
+.text2{
+    color: rgb(0, 0, 0);
+    font-size: 40rpx;
+}
+
+.text3{
+    color: rgb(0, 255, 13);
+    font-size: 60rpx;
+}
+
+.div-line{
+  background: linear-gradient(rgb(88, 88, 86),#E0E3DA);
+  width: 100%;
+  height:10rpx;
+}

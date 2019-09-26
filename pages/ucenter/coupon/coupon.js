@@ -31,11 +31,16 @@ Page({
   },
   showbookcode:function(e) {
     let show_code = e.currentTarget.dataset['delivery'];
+    let show_id = e.currentTarget.dataset['id'];
     if (!show_code){
       wx.showToast({
         title: '请先付款',
         icon: 'none',
         duration: 2000
+      })
+    } else {
+      wx.redirectTo({
+        url: '/pages/code/code?id=' + show_id,
       })
     }
   },

@@ -64,13 +64,27 @@
 
 .goods-info .desc {
   height: 43rpx;
-  margin-bottom: 41rpx;
+  margin-bottom: 21rpx;
   font-size: 24rpx;
   line-height: 36rpx;
   color: #999;
 }
 
 .goods-info .price {
+  height: 35rpx;
+  font-size: 35rpx;
+  line-height: 35rpx;
+  color: #b4282d;
+  margin-bottom: 21rpx;
+}
+
+.goods-info .SELLERold{  
+  height: 35rpx;
+  font-size: 24rpx;
+  line-height: 35rpx;
+  color: #999;
+}
+.goods-info .AIold{  
   height: 35rpx;
   font-size: 35rpx;
   line-height: 35rpx;
@@ -537,7 +551,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  background: #b4282d;
+  background: #FFA500;
   text-align: center;
   font-size: 18rpx;
   color: #fff;
@@ -569,8 +583,8 @@
 }
 
 .bottom-btn .r {
-  border: 1px solid #b4282d;
-  background: #b4282d;
+  border: 1px solid #FFA500;
+  background: #FFA500;
   float: left;
   height: 100rpx;
   line-height: 96rpx;
@@ -690,8 +704,8 @@
 }
 
 .spec-con .value.selected {
-  border: 1px solid #b4282d;
-  color: #b4282d;
+  border: 1px solid #FFA500;
+  color: #FFA500;
 }
 
 .number-item .selnum {

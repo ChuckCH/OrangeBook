@@ -1,0 +1,24 @@
+<!--pages/code/code.wxml-->
+<view class="a">
+  <view class="a id_1">
+    <text class="text1">您的订单号为</text>
+  </view>
+  <view class="div-line"></view>
+  <view class="a id_2">
+    <text class="text2">{{order_id}}</text>
+  </view>
+  <view class="a id_1">
+    <text class="text1">您的二手书所在的书柜位于</text>
+  </view>
+  <view class="div-line"></view>
+  <view class="a id_2">
+    <text class="text2">{{order_location}}</text>
+  </view>
+  <view class="a id_1">
+    <text class="text1">您的取书码为</text>
+  </view>
+  <view class="div-line"></view>
+  <view class="a id_2">
+    <text class="text3">{{order_number}}</text>
+  </view>
+</view>

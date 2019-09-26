@@ -10,7 +10,7 @@
               <view class="time">共{{gitem.number}}本书籍</view>
             </view>
             <view class="right">
-              <button class="go {{item.handleOption.delivery?'goshow':'gohide'}}" bindtap='showbookcode' data-delivery="{{item.handleOption.delivery}}">取书码</button>
+              <button class="go {{item.pay_id!=0?'goshow':'gohide'}}" bindtap='showbookcode' data-delivery="{{item.pay_id}}" data-id="{{item.order_sn}}">取书码</button>
             </view>
           </view>
             <navigator url="../orderDetail/orderDetail?id={{item.id}}" class="condition">
