@@ -6,7 +6,7 @@
       <!-- <text class='level' bindtap='onUserInfoClick'></text> -->
     </view>
   </view>
-
+  <view class="div-line"></view>
   <view class="user-menu">
     <view class="item">
       <navigator url="/pages/ucenter/order/order" class="a">

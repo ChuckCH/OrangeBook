@@ -41,6 +41,14 @@
   flex-direction: row;
   align-items: center;
   height: 120rpx;
+  background: linear-gradient(to right,#FFB95E 15%,#FCA362 5%,#FA8F66 25%,#F5736B 20%,#F35C70 30%);
+}
+.item_2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 120rpx;
+  background: linear-gradient(to right,#FFB95E 21%,#FCA362 11%,#FA8F66 31%,#F5736B 26%,#F35C70 36%);
 }
 .item-text {
   position: fixed;

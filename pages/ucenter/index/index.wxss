@@ -154,3 +154,9 @@ page{
 .dialog-login .dialog-body button{
   margin-top: 30rpx;
 }
+
+.div-line{
+  background: linear-gradient(rgb(88, 88, 86),#E0E3DA);
+  width: 100%;
+  height:10rpx;
+}

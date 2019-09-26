@@ -14,7 +14,7 @@
   <text class='item-array'>{{userInfo.nickname}}></text>
 </view>
 <view class="div-line"></view>
-<view class='item 2'>
+<view class='item_2'>
   <text class="item-text">头像</text>
   <image class="item-image" src="{{userInfo.avatar}}"></image>
   <text class='item-array'>></text>
